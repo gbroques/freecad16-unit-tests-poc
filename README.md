@@ -1,7 +1,7 @@
-# FreeCAD 0.16 Python Unit Tests with Docker
+# Freecad 0.16 Python Unit Tests With Docker and Travis CI
 [![Build Status](https://travis-ci.org/gbroques/freecad16-unit-tests-poc.svg?branch=master)](https://travis-ci.org/gbroques/freecad16-unit-tests-poc)
 
-Simple proof-of-concept for running python unit tests for FreeCAD 0.16 in a Docker container.
+Proof-of-concept for running python unit tests for FreeCAD 0.16 in a Docker container with [Travis CI](https://travis-ci.com/).
 
 ## Pre-Requisites
 1. Install [Docker](https://www.docker.com/)
