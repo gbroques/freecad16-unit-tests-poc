@@ -1,7 +1,7 @@
 # FreeCAD 0.16 Python Unit Tests with Docker
 Simple proof-of-concept for running python unit tests for FreeCAD 0.16 in a Docker container.
 
-## Pre-Requisties
+## Pre-Requisites
 1. Install [Docker](https://www.docker.com/)
 2. Clone repository
 
