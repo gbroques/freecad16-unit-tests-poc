@@ -1,0 +1,6 @@
+services:
+    - docker
+install:
+    - docker build . -t freecadtest-i 
+script:
+    - docker run --name freecadtest freecadtest-i
