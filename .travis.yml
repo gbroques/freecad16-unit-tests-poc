@@ -4,6 +4,8 @@ python:
 services:
     - docker
 install:
-    - docker build . -t freecadtest-i 
+    - docker build . -t freecadtest-i
+    - docker run --name freecadtest -v $(pwd)/test:/var/app/test -
+        -detach freecadtest-i
 script:
-    - docker run --name freecadtest freecadtest-i
+    - docker exec -it freecadtest python -m unittest discover test "*_test.py"

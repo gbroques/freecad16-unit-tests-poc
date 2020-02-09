@@ -12,10 +12,14 @@ Proof-of-concept for running python unit tests for FreeCAD 0.16 in a Docker cont
 $ docker build /path/to/repository -t freecadtest-i 
 ```
 ## Run Container
-
 ```
-$ docker run --name freecadtest freecadtest-i
+docker run --name freecadtest -v $(pwd)/test:/var/app/test -
+-detach freecadtest-i
+```
 
+## Run Tests
+```
+$ docker exec -it freecadtest python -m unittest discover test "*_test.py"
 FreeCAD 0.16, Libs: 0.16R6712 (Git)
 .
 ----------------------------------------------------------------------

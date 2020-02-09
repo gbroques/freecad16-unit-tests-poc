@@ -10,7 +10,10 @@ RUN add-apt-repository ppa:freecad-maintainers/freecad-legacy
 RUN apt-get update
 RUN apt-get install -y freecad-0.16
 
-COPY ./test /var/app/test/
+ENV PYTHONPATH=/usr/lib/freecad-0.16/lib/
+
+RUN mkdir -p /var/app/test
 WORKDIR /var/app
 
-CMD PYTHONPATH=$PYTHONPATH:/usr/lib/freecad-0.16/lib/ python -m unittest discover test "*_test.py"
+# Keep container running
+CMD tail -f /dev/null
