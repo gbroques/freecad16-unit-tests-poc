@@ -12,7 +12,7 @@ RUN apt-get install -y freecad-0.16
 
 ENV PYTHONPATH=/usr/lib/freecad-0.16/lib/
 
-RUN mkdir -p /var/app/test
+COPY ./test /var/app/test/
 WORKDIR /var/app
 
 # Keep container running
